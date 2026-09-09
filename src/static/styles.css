@@ -16,12 +16,37 @@ body {
 }
 
 header {
+  position: relative;
   text-align: center;
   padding: 20px 0;
   margin-bottom: 30px;
   background-color: #1a237e;
   color: white;
   border-radius: 5px;
+}
+
+#auth-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+#login-form,
+#logged-in-state {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+#login-form input {
+  width: 160px;
+  padding: 8px;
+  border: 1px solid #c5cae9;
+  border-radius: 4px;
+}
+
+#logged-in-state {
+  gap: 15px;
 }
 
 header h1 {
@@ -188,6 +213,12 @@ button:hover {
   border: 1px solid #bee5eb;
 }
 
+#login-required {
+  margin-top: 15px;
+  padding: 10px;
+  border-radius: 4px;
+}
+
 .hidden {
   display: none;
 }
@@ -197,4 +228,16 @@ footer {
   margin-top: 30px;
   padding: 20px;
   color: #666;
+}
+
+@media (max-width: 600px) {
+  #login-form {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  #login-form input,
+  #login-form button {
+    width: 100%;
+  }
 }

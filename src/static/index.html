@@ -10,6 +10,17 @@
     <header>
       <h1>Mergington High School</h1>
       <h2>Extracurricular Activities</h2>
+      <div id="auth-container">
+        <form id="login-form">
+          <input type="text" id="username" required placeholder="Teacher username" autocomplete="username" />
+          <input type="password" id="password" required placeholder="Password" autocomplete="current-password" />
+          <button type="submit">Teacher Login</button>
+        </form>
+        <div id="logged-in-state" class="hidden">
+          <span>Logged in as <strong id="logged-in-username"></strong></span>
+          <button type="button" id="logout-button">Log out</button>
+        </div>
+      </div>
     </header>
 
     <main>
@@ -22,7 +33,7 @@
       </section>
 
       <section id="signup-container">
-        <h3>Sign Up for an Activity</h3>
+        <h3>Register a Student</h3>
         <form id="signup-form">
           <div class="form-group">
             <label for="email">Student Email:</label>
@@ -35,8 +46,9 @@
               <!-- Activity options will be loaded here -->
             </select>
           </div>
-          <button type="submit">Sign Up</button>
+          <button type="submit">Register Student</button>
         </form>
+        <p id="login-required" class="info">Teacher login is required to register or unregister students.</p>
         <div id="message" class="hidden"></div>
       </section>
     </main>
